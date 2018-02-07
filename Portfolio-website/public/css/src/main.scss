@@ -1,0 +1,96 @@
+@import "colors";
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.abs-center-elements {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.hero-image {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: no-repeat center center url("../../images/hero-background.png");
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+}
+
+.hero-text {
+    top: 208px;
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    h1, h2 {
+        color: white;
+    }
+}
+
+.hero-button {
+    outline: none;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 25px 38px;
+    width: 266px;
+
+    bottom: 186px;
+}
+
+.section {
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.headshot {
+    width: 300px;
+    height: 259px;
+}
+
+.skill-box {
+    display: inline-block;
+
+    border: 1px solid $orange-red;
+    padding: 10px;
+    margin: 5px 0 0 0px;
+}
+
+.bg-gray {
+    background-color: $light-gray;
+}
+
+.technologies {
+    text-transform: uppercase;
+}

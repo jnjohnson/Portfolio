@@ -1,18 +1,18 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 2px; }
+  font-family: 'Open Sans', sans-serif; }
 
 h1 {
   font-size: 3rem; }
 
-h1, h2, h3 {
-  text-transform: uppercase;
-  font-weight: 600; }
-
 h3 {
   font-size: 1.5rem; }
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px; }
 
 .abs-center-elements {
   position: absolute;
@@ -38,12 +38,20 @@ h3 {
   .hero-text h1, .hero-text h2 {
     color: white; }
 
-.hero-button {
+.button {
   outline: none;
   background: transparent;
   border: 3px solid white;
   color: white;
   cursor: pointer;
+  transition: background 0.75s ease, color 0.75s ease; }
+
+.button:hover {
+  background: white;
+  color: black;
+  text-decoration: none; }
+
+.hero-button {
   text-transform: uppercase;
   font-size: 1.5rem;
   padding: 25px 38px;
@@ -51,12 +59,26 @@ h3 {
   bottom: 186px; }
 
 .section {
-  height: 100vh;
-  padding-top: 100px; }
+  min-height: 100vh;
+  padding: 75px 0px; }
 
 .headshot {
   width: 300px;
   height: 259px; }
+
+.social-link {
+  width: 90px;
+  height: 90px;
+  padding: 17px;
+  border: 3px solid #8f4842;
+  transition: background-color 1s ease; }
+  .social-link img {
+    width: 50px;
+    height: 50px; }
+
+.social-link:hover {
+  background-color: #8f4842;
+  cursor: pointer; }
 
 .skill-box {
   display: inline-block;
@@ -67,5 +89,61 @@ h3 {
 .bg-gray {
   background-color: #ebebeb; }
 
+.bg-dark-gray {
+  background-color: #2c2c2c; }
+
+.bg-dark-blue {
+  background-color: #2e3542; }
+
+.work-border {
+  border: 3px solid #2e3542;
+  margin-top: 40px;
+  padding: 20px 5px; }
+
 .technologies {
+  margin-top: 45px;
   text-transform: uppercase; }
+  .technologies p {
+    margin-bottom: 0.5rem; }
+  .technologies .technology-box {
+    color: white;
+    background-color: #2e3542;
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 7px 12px;
+    margin-bottom: 6px;
+    margin-right: 2px;
+    letter-spacing: 2px; }
+
+.contact-section {
+  min-height: 60vh;
+  padding: 75px 0px;
+  color: white; }
+  .contact-section h2 {
+    color: #ebebeb; }
+
+.contact-form {
+  width: 100%;
+  margin-top: 70px; }
+  .contact-form .form-item {
+    min-width: 500px;
+    background-color: #ebebeb;
+    color: #2c2c2c;
+    border: none;
+    margin-bottom: 5px;
+    padding-left: 15px; }
+
+.submit-button-container {
+  width: 500px;
+  height: 70px; }
+
+.submit-button {
+  padding: 20px 40px;
+  float: right; }
+
+textarea.form-item {
+  height: 178px; }
+
+.footer-section {
+  min-height: 15vh;
+  color: white; }

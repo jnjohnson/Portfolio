@@ -5,20 +5,20 @@
     margin: 0px;
 
     font-family: 'Open Sans', sans-serif;
-    letter-spacing: 2px;
 }
 
 h1 {
     font-size: 3rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
 h1, h2, h3 {
     text-transform: uppercase;
     font-weight: 600;
-}
-
-h3 {
-    font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
 .abs-center-elements {
@@ -54,13 +54,22 @@ h3 {
     }
 }
 
-.hero-button {
+.button {
     outline: none;
     background: transparent;
     border: 3px solid white;
     color: white;
     cursor: pointer;
+    transition: background 0.75s ease, color 0.75s ease;
+}
 
+.button:hover {
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+.hero-button {
     text-transform: uppercase;
     font-size: 1.5rem;
     padding: 25px 38px;
@@ -70,13 +79,32 @@ h3 {
 }
 
 .section {
-    height: 100vh;
-    padding-top: 100px;
+    min-height: 100vh;
+    padding: 75px 0px;
 }
 
 .headshot {
     width: 300px;
     height: 259px;
+}
+
+.social-link {
+    width: 90px;
+    height: 90px;
+    padding: 17px;
+
+    border: 3px solid $orange-red;
+    transition: background-color 1s ease;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.social-link:hover {
+    background-color: $orange-red;
+    cursor: pointer;
 }
 
 .skill-box {
@@ -91,6 +119,82 @@ h3 {
     background-color: $light-gray;
 }
 
+.bg-dark-gray {
+    background-color: $dark-gray;
+}
+
+.bg-dark-blue {
+    background-color: $midnight-blue;
+}
+
+.work-border {
+    border: 3px solid $midnight-blue;
+    margin-top: 40px;
+    padding: 20px 5px;
+}
+
 .technologies {
+    margin-top: 45px;
     text-transform: uppercase;
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    .technology-box {
+        color: white;
+        background-color: $midnight-blue;
+        display: inline-block;
+
+        font-size: 0.75rem;
+        padding: 7px 12px;
+        margin-bottom: 6px;
+        margin-right: 2px;
+        letter-spacing: 2px;
+    }
+}
+
+.contact-section {
+    min-height: 60vh;
+    padding: 75px 0px;
+
+    color: white;
+
+    h2 {
+        color: $light-gray;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 70px;
+
+    .form-item {
+        min-width: 500px;
+        background-color: $light-gray;
+        color: $dark-gray;
+
+        border: none;
+        margin-bottom: 5px;
+        padding-left: 15px;
+    }
+}
+
+.submit-button-container {
+    width: 500px;
+    height: 70px;
+}
+
+.submit-button {
+    padding: 20px 40px;
+    float: right;
+}
+
+textarea.form-item {
+    height: 178px;
+}
+
+.footer-section {
+    min-height: 15vh;
+    color: white;
 }

@@ -98,7 +98,18 @@ h1, h2, h3 {
 .work-border {
   border: 3px solid #2e3542;
   margin-top: 40px;
-  padding: 20px 5px; }
+  padding: 20px 0px; }
+
+.work-link {
+  color: inherit; }
+
+.work-link:hover {
+  text-decoration: none;
+  color: inherit; }
+
+.work-thumbnail {
+  width: 500px;
+  height: 281px; }
 
 .technologies {
   margin-top: 45px;

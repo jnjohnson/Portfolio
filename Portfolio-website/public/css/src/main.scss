@@ -28,6 +28,14 @@ h1, h2, h3 {
     margin: auto;
 }
 
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: $orange-red;
+}
+
 .hero-image {
     position: absolute;
     height: 100vh;
@@ -168,7 +176,7 @@ h1, h2, h3 {
     }
 }
 
-.contact-section {
+.contact {
     min-height: 60vh;
     padding: 75px 0px;
 

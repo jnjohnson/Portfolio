@@ -20,6 +20,12 @@ h1, h2, h3 {
   right: 0;
   margin: auto; }
 
+.nav-link {
+  color: white; }
+
+.nav-link:hover {
+  color: #8f4842; }
+
 .hero-image {
   position: absolute;
   height: 100vh;
@@ -126,11 +132,11 @@ h1, h2, h3 {
     margin-right: 2px;
     letter-spacing: 2px; }
 
-.contact-section {
+.contact {
   min-height: 60vh;
   padding: 75px 0px;
   color: white; }
-  .contact-section h2 {
+  .contact h2 {
     color: #ebebeb; }
 
 .contact-form {

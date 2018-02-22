@@ -1,7 +1,11 @@
 {
-  "name": "Portfolio Website",
+  "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "A personal portfolio website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnjohnson/Portfolio"
+  },
   "main": "index.js",
   "scripts": {
     "start": "nodemon --inspect index.js"

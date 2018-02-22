@@ -20,11 +20,12 @@ h1, h2, h3 {
   right: 0;
   margin: auto; }
 
-.nav-link {
-  color: white; }
+.navbar {
+  position: absolute;
+  width: 100%; }
 
-.nav-link:hover {
-  color: #8f4842; }
+.navbar-dark .navbar-nav .nav-link {
+  color: white; }
 
 .hero-image {
   position: absolute;
@@ -65,8 +66,10 @@ h1, h2, h3 {
   bottom: 186px; }
 
 .section {
-  min-height: 100vh;
   padding: 75px 0px; }
+  @media (min-width: 1200px) {
+    .section {
+      min-height: 100vh; } }
 
 .headshot {
   width: 300px;
@@ -104,7 +107,10 @@ h1, h2, h3 {
 .work-border {
   border: 3px solid #2e3542;
   margin-top: 40px;
-  padding: 20px 0px; }
+  padding: 30px 0px; }
+  @media (min-width: 1200px) {
+    .work-border {
+      padding: 20px 0px; } }
 
 .work-link {
   color: inherit; }
@@ -113,13 +119,18 @@ h1, h2, h3 {
   text-decoration: none;
   color: inherit; }
 
-.work-thumbnail {
+.work-img-thumbnail {
   width: 500px;
   height: 281px; }
 
 .technologies {
-  margin-top: 45px;
+  margin: 45px 0 30px 0;
   text-transform: uppercase; }
+  @media (min-width: 1200px) {
+    .technologies {
+      position: absolute;
+      bottom: 0;
+      margin: 0px; } }
   .technologies p {
     margin-bottom: 0.5rem; }
   .technologies .technology-box {
@@ -133,9 +144,11 @@ h1, h2, h3 {
     letter-spacing: 2px; }
 
 .contact {
-  min-height: 60vh;
   padding: 75px 0px;
   color: white; }
+  @media (min-width: 1200px) {
+    .contact {
+      min-height: 60vh; } }
   .contact h2 {
     color: #ebebeb; }
 

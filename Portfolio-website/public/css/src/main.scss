@@ -28,12 +28,13 @@ h1, h2, h3 {
     margin: auto;
 }
 
-.nav-link {
-    color: white;
+.navbar {
+    position: absolute;
+    width: 100%;
 }
 
-.nav-link:hover {
-    color: $orange-red;
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
 
 .hero-image {
@@ -87,8 +88,12 @@ h1, h2, h3 {
 }
 
 .section {
-    min-height: 100vh;
     padding: 75px 0px;
+
+    @media (min-width: 1200px) {
+        min-height: 100vh;
+    }
+    
 }
 
 .headshot {
@@ -138,7 +143,12 @@ h1, h2, h3 {
 .work-border {
     border: 3px solid $midnight-blue;
     margin-top: 40px;
-    padding: 20px 0px;
+
+    padding: 30px 0px;
+
+    @media (min-width: 1200px) {
+        padding: 20px 0px;
+    }
 }
 
 .work-link {
@@ -150,14 +160,21 @@ h1, h2, h3 {
     color: inherit;
 }
 
-.work-thumbnail {
+.work-img-thumbnail {
     width: 500px;
     height: 281px;
 }
 
 .technologies {
-    margin-top: 45px;
+    margin: 45px 0 30px 0;
     text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+        position: absolute;
+        bottom: 0;
+
+        margin: 0px;
+    }
 
     p {
         margin-bottom: 0.5rem;
@@ -177,10 +194,12 @@ h1, h2, h3 {
 }
 
 .contact {
-    min-height: 60vh;
     padding: 75px 0px;
-
     color: white;
+
+    @media (min-width: 1200px) {
+        min-height: 60vh;
+    }
 
     h2 {
         color: $light-gray;

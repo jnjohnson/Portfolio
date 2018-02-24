@@ -12,8 +12,7 @@ app = config(app);
 app.set('views', __dirname + '/views');
 
 if (environment === undefined){
-	const hostname 	= 'jnjohnson.io',
-		  port		= 443;
+	const port = 443;
 
 	var	https		= require('https'),
 		fs 			= require('fs'),

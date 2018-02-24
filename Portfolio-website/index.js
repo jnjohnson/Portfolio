@@ -25,7 +25,8 @@ if (environment === undefined){
 	
 	app.set('port', port);
 
-	https.createServer(options, app).listen(app.get('port'), function(){
+	https.createServer(options, app).listen(app.get('port'), function(req, res){
+		console.log(req.secure);
 		console.log('Server up: jnjohnson.io is live on port ' + app.get('port'));
 	});
 }

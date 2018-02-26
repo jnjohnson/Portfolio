@@ -45,9 +45,13 @@ h1, h2, h3 {
 }
 
 .resume-link {
-    padding: 0.5rem;
+    padding: 0.5rem 0rem;
     display: block;
     color: white;
+
+    @media (min-width: 576px) {
+        padding: 0.5rem;
+    }
 }
 
 .resume-link:hover{

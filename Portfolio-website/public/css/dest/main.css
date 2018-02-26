@@ -32,6 +32,15 @@ h1, h2, h3 {
 .navbar-dark .navbar-nav .nav-link {
   color: white; }
 
+.resume-link {
+  padding: 0.5rem;
+  display: block;
+  color: white; }
+
+.resume-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none; }
+
 .hero-image {
   position: absolute;
   height: 100vh;

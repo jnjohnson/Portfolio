@@ -2,6 +2,7 @@
 var express 	= require('express'),
 	config 		= require('./server/configure'),
 	app 		= express(),
+	forceSsl	= require('express-force-ssl'),
 	environment = process.argv[2];
 
 /* CALL THE MODULE.EXPORTS CONSTRUCTOR FUNCTION OF THE CONFIGURE FILE THIS ADDS TO APP AND RETURNS APP
@@ -15,6 +16,7 @@ if (environment === undefined){
 	const port = 443;
 
 	var	https		= require('https'),
+		http		= require('http'),
 		fs 			= require('fs'),
 		options		= {
 			ca: 	fs.readFileSync('/etc/ssl/private/COMODO_DV_SHA-256_bundle.crt'),
@@ -23,11 +25,12 @@ if (environment === undefined){
 		};
 	
 	app.set('port', port);
+	app.use('forceSsl');
 
 	app.get("*", function(req,res,next) {
 		res.redirect("https://jnjohnson.io/");
 	});
-
+	http.createServer(app).listen(80);
 	https.createServer(options, app).listen(app.get('port'), function(req, res){
 		console.log('Server up: jnjohnson.io is live on port ' + app.get('port'));
 	});

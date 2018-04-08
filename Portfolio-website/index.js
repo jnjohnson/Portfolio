@@ -15,7 +15,6 @@ if (environment === undefined){
 	const port = 443;
 
 	var	https		= require('https'),
-		http		= express.createServer(),
 		fs 			= require('fs'),
 		options		= {
 			ca: 	fs.readFileSync('/etc/ssl/private/COMODO_DV_SHA-256_bundle.crt'),
@@ -25,8 +24,8 @@ if (environment === undefined){
 	
 	app.set('port', port);
 
-	http.get('*', function(req, res) {
-		res.redirect('https://' + req.headers.host + req.url);
+	app.get("*", function(req,res,next) {
+		res.redirect("https://jnjohnson.io/");
 	});
 
 	https.createServer(options, app).listen(app.get('port'), function(req, res){

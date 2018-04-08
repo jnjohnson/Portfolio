@@ -25,7 +25,7 @@ if (environment === undefined){
 		};
 	
 	app.set('port', port);
-	app.use('forceSsl');
+	app.use(forceSsl);
 
 	app.get("*", function(req,res,next) {
 		res.redirect("https://jnjohnson.io/");

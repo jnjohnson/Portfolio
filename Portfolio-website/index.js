@@ -27,9 +27,6 @@ if (environment === undefined){
 	app.set('port', port);
 	app.use(forceSsl);
 
-	app.get("*", function(req,res,next) {
-		res.redirect("https://jnjohnson.io/");
-	});
 	http.createServer(app).listen(80);
 	https.createServer(options, app).listen(app.get('port'), function(req, res){
 		console.log('Server up: jnjohnson.io is live on port ' + app.get('port'));

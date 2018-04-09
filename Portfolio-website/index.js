@@ -2,7 +2,6 @@
 var express 	= require('express'),
 	config 		= require('./server/configure'),
 	app 		= express(),
-	forceSsl	= require('express-force-ssl'),
 	environment = process.argv[2];
 
 /* CALL THE MODULE.EXPORTS CONSTRUCTOR FUNCTION OF THE CONFIGURE FILE THIS ADDS TO APP AND RETURNS APP
@@ -25,11 +24,19 @@ if (environment === undefined){
 		};
 	
 	app.set('port', port);
-	app.use(forceSsl);
 
 	http.createServer(app).listen(80);
 	https.createServer(options, app).listen(app.get('port'), function(req, res){
 		console.log('Server up: jnjohnson.io is live on port ' + app.get('port'));
+	});
+
+	app.use(function(req, res, next) {
+		if (req.secure){
+			next();
+		}
+		else {
+			res.redirect('https://' + req.headers.host + req.url);
+		}
 	});
 }
 else if (environment == "dev"){
